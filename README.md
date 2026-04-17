@@ -37,8 +37,8 @@ RUN apt-get update && apt-get install -y curl
 
 Construye la imagen y ejecuta un contenedor.
 
-<img width="1504" height="285" alt="captura 6" src="https://github.com/user-attachments/assets/77f501bb-df38-4e32-89f5-
-dbda6467ce8e" />
+<img width="1504" height="285" alt="captura 6" src="https://github.com/user-attachments/assets/2c4e7fa8-ed5a-4d0a-aad9-912d6b5bf451" />
+
 
 Construyo la imagen con el comando anterior y le indico donde se encuentra el fichero Dockerfile en este caso se indica . para indicarle que está en este directorio. Mucho ojo con lo siguiente, el fichero tiene que llamarse Dockerfile “la D en mayúsculas y se crea el fichero sin extensión en visual studio”
 
