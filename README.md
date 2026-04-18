@@ -210,4 +210,20 @@ Pregunta:
 ¿Qué ocurre si modificas el archivo index.html en tu máquina?
 Tal y como he comentado anteriormente, cuando actualizamos nuestra web vemos que se modifica automáticamente.
 
+# Ejercicio 5
+
+5. Auditando volúmenes (opcional)
+Investiga:
+¿Qué comando permite ver dónde guarda Docker los datos de un volumen?
+
+Lo que he realizado es primero ver los volúmenes que tengo
+
+<img width="935" height="257" alt="captura 1" src="https://github.com/user-attachments/assets/335b201c-0822-4b70-b6fc-b15e60ace453" />
+
+<img width="393" height="231" alt="captura 2" src="https://github.com/user-attachments/assets/394bd3b5-51df-4277-b3a8-c9394eb4960b" />
+
+Y vemos que tenemos el volumen index.html que hemos creado anteriormente
+A continuación, inspeccionamos este volumen con el siguiente comando
+
+<img width="819" height="271" alt="captura 3" src="https://github.com/user-attachments/assets/36a73338-20a0-4fc0-9a97-4e2d047d38e8" />
 
