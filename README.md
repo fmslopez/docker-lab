@@ -279,3 +279,15 @@ Ya vemos que hay comunicación entre los dos contenedores mediante ping
 Pregunta
 ¿Los contenedores pueden comunicarse entre sí?
 Si, al estar dentro de la misma red y tener una ip dentro de su misma red.
+
+
+# Ejercicio 7 
+
+7. Red none (opcional)
+Investiga:
+¿Para qué serviría ejecutar un contenedor con red:
+none
+
+Lo que se realiza es aislar el contenedor. Lo podemos usar por temas de seguridad, bases de datos a las que no se deben de acceder desde otros lugares, sistemas independientes u otra actividad que no requiera comunicación al contenedor. Con hacemos que no se pueda acceder a este contenedor por medio de la red.
+
+
