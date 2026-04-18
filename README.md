@@ -53,8 +53,50 @@ Pregunta
 ¿Qué comando permite ver las capas de una imagen Docker?
 Docker history nombre_imagen
 
-#Ejercicio 2
+# Ejercicio 2
+Limpiando imágenes (opcional)
+Crea un Dockerfile basado en: ubuntu
+Construye la imagen.<img width="1429" height="367" alt="captura 4" src="https://github.com/user-attachments/assets/e6cfe7bc-2db3-4d81-a198-2e44defdbe05" />
 
+
+<img width="1478" height="356" alt="captura 1" src="https://github.com/user-attachments/assets/269b120c-60bc-41ae-8870-c24183bad0e3" />
+
+<img width="1279" height="608" alt="captura 2" src="https://github.com/user-attachments/assets/59c2f323-812f-4eec-b193-0b1493999c61" />
+
+<img width="1724" height="77" alt="captura 3" src="https://github.com/user-attachments/assets/22ad1177-1df6-4c3a-9f0d-564c4fb396fb" />
+
+
+Después modifica el Dockerfile para instalar:
+•	curl
+
+
+<img width="1429" height="367" alt="captura 4" src="https://github.com/user-attachments/assets/24e30705-2f9d-4cf2-9c31-3de7ff4fe81b" />
+
+<img width="1247" height="630" alt="captura 5" src="https://github.com/user-attachments/assets/f29875a4-4035-46f4-a1c2-3b9c901b69fb" />
+
+
+<img width="1367" height="68" alt="captura 6" src="https://github.com/user-attachments/assets/5c3513ff-f50e-4e7e-a5cb-2e1994e23fb3" />
+
+•	después wget
+
+imagenes 7 a 8
+
+<img width="1572" height="393" alt="captura 7" src="https://github.com/user-attachments/assets/0a956ac3-86d9-4e62-8ca2-88710b940a24" />
+
+
+<img width="1739" height="110" alt="captura 8" src="https://github.com/user-attachments/assets/12a8b3e6-40d3-4788-a2cc-a09a1e7a4de4" />
+
+
+Construye la imagen en cada cambio.
+Me he creado otra nueva imagen
+Lista las imágenes:
+docker images
+ <img width="1478" height="356" alt="captura 1" src="https://github.com/user-attachments/assets/6fb0f776-a2a1-49ed-83a6-ea62c52fedde" />
+<img width="1478" height="356" alt="captura 1" src="https://github.com/user-attachments/assets/40b89d99-13f2-497c-b5ab-db30630e348f" />
+
+Pregunta:
+¿Qué ocurre con las imágenes anteriores?
+Las imágenes anteriores se mantienen para volver a usarlas posteriormente cuando sea necesario.
 
 
 
