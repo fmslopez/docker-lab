@@ -167,3 +167,47 @@ Vemos que ya no está el contenedor
 Y en la captura anterior vemos como seguimos teniendo la misma información, a pesar de haber eliminado el contenedor anteriormente.
 
 
+# Ejercicio 4
+
+Crea un archivo en tu máquina:
+index.html
+ 
+Ejemplo:
+<h1>Hola Docker</h1>
+
+<img width="1752" height="621" alt="captura 1" src="https://github.com/user-attachments/assets/e3b627aa-b524-4266-92fe-0b5c21a16dfa" />
+
+Ejecuta un contenedor nginx:
+•	mapea el puerto 80
+•	monta el archivo en:
+<!-- -->
+ 
+/usr/share/nginx/html/index.html
+ 
+Abre el navegador.
+
+<img width="1631" height="180" alt="captura 2" src="https://github.com/user-attachments/assets/c62e02e0-1cfa-437e-ae91-1c2273324c9c" />
+
+
+Creamos un contenedor nginx denominado nginx_apartado4, expuesto en el puerto 80 y mediante un volumen tipo bind mount el cual toma el archivo index.html de mi carpeta y lo enlaza al directorio donde se deben de incluir dentro del servidor nginx.
+
+<img width="487" height="262" alt="captura 3" src="https://github.com/user-attachments/assets/2479c55d-acb0-4f57-9eea-14b818192d94" />
+
+
+Vemos que funciona
+Y ahora vamos a modificar el fichero index.html en nuestra carpeta del equipo host.
+
+
+<img width="1822" height="637" alt="captura 4" src="https://github.com/user-attachments/assets/2d4bb09d-4b74-406d-9a52-df30759261d6" />
+
+
+Y vemos como se modifica en nuestro navegador una vez recarguemos la página, sin tener que levantar un nuevo contenedor ni otra acción sobre el mismo.
+
+<img width="489" height="375" alt="captura 5" src="https://github.com/user-attachments/assets/102eb118-0876-4eb5-933a-30124bfa0d50" />
+
+
+Pregunta:
+¿Qué ocurre si modificas el archivo index.html en tu máquina?
+Tal y como he comentado anteriormente, cuando actualizamos nuestra web vemos que se modifica automáticamente.
+
+
