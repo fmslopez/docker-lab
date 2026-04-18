@@ -227,3 +227,55 @@ A continuación, inspeccionamos este volumen con el siguiente comando
 
 <img width="819" height="271" alt="captura 3" src="https://github.com/user-attachments/assets/36a73338-20a0-4fc0-9a97-4e2d047d38e8" />
 
+# Ejercicio 6
+
+Creando redes privadas
+Crea una red llamada:
+my-net
+ 
+docker network create my-net
+
+<img width="782" height="320" alt="captura 1" src="https://github.com/user-attachments/assets/b6a47112-7fe2-45c4-adc6-34c69711eae9" />
+
+Creamos la red solicitada y vemos la que tenemos hasta ahora
+
+Arranca dos contenedores ubuntu en esa red.
+docker run -dit --name ubuntu1 --network my-net ubuntu
+docker run -dit --name ubuntu2 --network my-net Ubuntu
+
+<img width="1054" height="280" alt="captura 2" src="https://github.com/user-attachments/assets/5f8ef3a8-ce2b-4b69-910d-314a98af08d3" />
+
+Creamos los 2 contenedores
+
+Instala ping si es necesario.
+docker exec -it ubuntu1 apt-get update && apt-get install -y iputils-ping
+docker exec -it ubuntu2 apt-get update && apt-get install -y iputils-ping
+Para la instalación de ping lo que hago es utilizar el comando exec el cual ejecuta la acción dentro del contenedor
+
+<img width="1081" height="497" alt="captura 3" src="https://github.com/user-attachments/assets/f4559917-5111-4823-9538-6a7f11a0c8b0" />
+
+
+Instalo la herramienta iputils y el comando ping.
+Realizo la misma operación en el contenedor 2 también.
+
+Desde un contenedor intenta hacer:
+ping otro_contenedor
+ 
+docker exec -it ubuntu1 ping -c 3 ubuntu2
+
+<img width="1401" height="148" alt="captura 4" src="https://github.com/user-attachments/assets/ba64fe91-ed9e-4d94-85ca-5b1c8971d593" />
+
+Me aparece el error anterior, parece que no se ha instalado correctamente ping, por lo que voy a realizarlo de nuevo.
+
+<img width="1289" height="623" alt="captura 5" src="https://github.com/user-attachments/assets/9b035890-d95d-4a2e-8d14-5d6517da2335" />
+
+
+Ejecuto solamente la instalación de ping tanto en Ubuntu1 como ubuntu2
+
+<img width="1302" height="361" alt="captura 6" src="https://github.com/user-attachments/assets/3476acab-a023-4dd1-8256-68a8b519e99f" />
+
+Ya vemos que hay comunicación entre los dos contenedores mediante ping
+
+Pregunta
+¿Los contenedores pueden comunicarse entre sí?
+Si, al estar dentro de la misma red y tener una ip dentro de su misma red.
