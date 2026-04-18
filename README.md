@@ -290,4 +290,31 @@ none
 
 Lo que se realiza es aislar el contenedor. Lo podemos usar por temas de seguridad, bases de datos a las que no se deben de acceder desde otros lugares, sistemas independientes u otra actividad que no requiera comunicación al contenedor. Con hacemos que no se pueda acceder a este contenedor por medio de la red.
 
+# Ejercicio 8
+
+Multi-network (opcional)
+Crea dos redes:
+secure-zone
+public-zone
+ 
+docker network create secure-zone
+docker network create public-zone
+<img width="826" height="131" alt="captura 1" src="https://github.com/user-attachments/assets/5a0805d1-a7b1-47ad-875a-f34dd0b0bd7d" />
+
+Arranca un contenedor en public-zone.
+docker run -d --name mi-contenedor --network public-zone nginx
+
+<img width="1097" height="82" alt="captura 2" src="https://github.com/user-attachments/assets/b90cb225-a504-4452-b95e-97b9841c2034" />
+
+Pregunta:
+¿Puedes conectarlo también a secure-zone?
+Sí se podría
+¿Qué comando usarías?
+docker network connect secure-zone mi-contenedor
+
+<img width="1031" height="49" alt="captura 3" src="https://github.com/user-attachments/assets/f3361e7e-fae0-41bd-bd5b-4a120a41b3e8" />
+docker inspect mi-contenedor, con el siguiente comando podemos comprobar que tenemos las dos redes conectadas en el contenedor apache_actividad8 que me he creado.
+
+<img width="649" height="612" alt="captura 4" src="https://github.com/user-attachments/assets/35509663-c808-48af-8981-09f329d6318c" />
+
 
