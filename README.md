@@ -352,4 +352,54 @@ El resultado lo podemos ver desde docker desktop.
 
 <img width="1736" height="935" alt="captura 5" src="https://github.com/user-attachments/assets/9f64ce9e-86ef-4389-817d-dbd4bb8cd0ff" />
 
+# Ejercicio 10
 
+Docker Compose Profiles (opcional)
+Crea un docker-compose.yml con:
+•	postgres
+•	pgadmin
+Haz que pgadmin pueda conectarse a postgres.
+En este caso, vamos a crear 2 servicios uno para la BD postgres y otro para el administrador de la BD pgadmin.
+
+<img width="700" height="497" alt="captura 1" src="https://github.com/user-attachments/assets/ca19f51a-9bec-4089-bdb3-3f2cf0f99da9" />
+
+Creamos el primer servicio que es la BD. Tomamos la imagen de postgres, configuramos 3 variables de entorno, luego configuro los puertos, el volumen de datos, la red a la cual también estará conectada el administrador pgadmin y el perfil que nos solicita la actividad.
+
+<img width="610" height="451" alt="captura 2" src="https://github.com/user-attachments/assets/c62284e1-5a82-4e33-8b5d-bd2bbba09f11" />
+
+La anterior captura muestra el servicio para la administración de la base de datos, tomamos la imagen de pgadmin4, se configura las variables de entorno indicadas, el puerto, hay que tener en cuenta que este servicio depende que el servicio anterior de la BD esté levantado porque sino no debería de acceder a la BD, se configura la red y el perfil que nos solicita la actividad.
+
+<img width="831" height="999" alt="captura 3" src="https://github.com/user-attachments/assets/7d705d6c-1085-41e0-bcfd-3a6ba3720cf8" />
+
+Crea dos perfiles:
+Perfil completo
+Levanta:
+•	postgres
+•	pgadmin
+Perfil base
+Levanta solo:
+•	postgres
+
+<img width="1808" height="268" alt="captura 4" src="https://github.com/user-attachments/assets/6fbd7e73-fda0-46b7-8f4a-2f312d60454c" />
+
+Levantamos el contenedor con el perfil base, donde solo levantamos la base de datos postgres
+
+<img width="1808" height="256" alt="captura 5" src="https://github.com/user-attachments/assets/7b0051ab-f6c4-4ec7-a309-01bfa40e49de" />
+
+A continuación, levantamos el servicio con el perfil completo
+
+<img width="1796" height="358" alt="captura 6" src="https://github.com/user-attachments/assets/8e26608c-586c-441b-b3fb-da720a72cd45" />
+
+En las siguientes capturas muestro el acceso a la BD postgres
+<img width="1908" height="899" alt="captura 7" src="https://github.com/user-attachments/assets/1b87779f-d5c5-4279-9f1d-c2e5d925ad6f" />
+
+<img width="1837" height="1007" alt="captura 8" src="https://github.com/user-attachments/assets/ff3604b0-c923-46b5-ba2f-9431e2f64bfe" />
+
+<img width="1156" height="980" alt="captura 9" src="https://github.com/user-attachments/assets/c20c6195-2e13-4e02-9337-191e760b3b2f" />
+
+<img width="1416" height="874" alt="captura 10" src="https://github.com/user-attachments/assets/16e76e86-6894-4aff-bbb9-54a627291cde" />
+
+<img width="1657" height="185" alt="captura 11" src="https://github.com/user-attachments/assets/24d78d01-b049-48d6-9ddb-f9f384a96826" />
+
+
+Con esto se finaliza la práctica.
