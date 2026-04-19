@@ -317,4 +317,39 @@ docker inspect mi-contenedor, con el siguiente comando podemos comprobar que ten
 
 <img width="649" height="612" alt="captura 4" src="https://github.com/user-attachments/assets/35509663-c808-48af-8981-09f329d6318c" />
 
+# Ejercicio 9
+Docker Compose --- Compartiendo volúmenes
+Crea un fichero:
+docker-compose.yml
+ 
+Con dos servicios.
+Este servicio consiste básicamente en el paradigma productor, consumidor. Un servicio produce y el otro consume. En nuestro caso lo vamos a representar como un escritor y un lector.
+
+writer
+Debe:
+•	montar un volumen en /app/logs
+•	escribir un timestamp cada 30 segundos
+
+<img width="1578" height="302" alt="captura 1" src="https://github.com/user-attachments/assets/dfe0d03c-0eb2-4a9b-94e0-a0e36b51726c" />
+
+Me creo un servicio con una imagen de alpine, que es una imagen muy liviana, le indico un nombre al volumen y desde donde se ubicará en el host y en la máquina contenedora. Posteriormente, se indican los comandos mediante un script el cual va escribiendo un timestamp cada 30sg.
+
+________________________________________
+reader
+Debe:
+•	montar el volumen en modo solo lectura
+•	mostrar el contenido en consola
+
+<img width="898" height="300" alt="captura 2" src="https://github.com/user-attachments/assets/3512ac2e-7c3d-4ab3-8e98-c1c34096fdaf" />
+
+El servicio de lectura va leyendo en tiempo real lo que va escribiendo el servicio writer.
+Con docker-compose up levantamos el servicio y con docker-compose down lo echamos abajo
+El resultado lo podemos ver desde docker desktop.
+
+<img width="1796" height="569" alt="captura 3" src="https://github.com/user-attachments/assets/435f6d05-d2fe-4067-8604-927683bddca3" />
+
+<img width="1258" height="908" alt="captura 4" src="https://github.com/user-attachments/assets/e17d8e09-21ee-459b-8419-bde2a08a9d32" />
+
+<img width="1736" height="935" alt="captura 5" src="https://github.com/user-attachments/assets/9f64ce9e-86ef-4389-817d-dbd4bb8cd0ff" />
+
 
